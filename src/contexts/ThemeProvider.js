@@ -36,14 +36,15 @@ function ThemeProvider({ children }) {
       secondary: SECONDARY,
       success: SUCCESS,
     },
-    shape: { borderRadius: 8 },
+    shape: { borderRadius: 8 }, //8px
   };
 
   const theme = createTheme(themeOptions);
 
   return (
     <MUIThemeProvider theme={theme}>
-      <CssBaseline />
+      {<CssBaseline />}
+      {/* <CssBaseline /> xoa defaul css cuar browser */}
       {children}
     </MUIThemeProvider>
   );
