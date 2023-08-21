@@ -6,10 +6,11 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 
 import Logo from "../components/Logo";
-import useAuth from "../contexts/UseAuth";
+import useAuth from "../hooks/useAuth";
 
 function MainHeader() {
-  const {user} = useAuth();
+  const { user } = useAuth();
+
   return (
     <Box>
       <AppBar position="static">

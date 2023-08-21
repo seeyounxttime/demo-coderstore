@@ -73,6 +73,7 @@ function AuthProvider({ children }) {
   }, []);
 
   const login = async (username, callback) => {
+    window.localStorage.setItem("username", username);
     dispatch({
       type: LOGIN_SUCCESS,
       payload: { user: { username } },
@@ -81,6 +82,7 @@ function AuthProvider({ children }) {
   };
 
   const logout = async (callback) => {
+    window.localStorage.removeItem("username");
     dispatch({ type: LOGOUT });
     callback();
   };

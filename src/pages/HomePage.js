@@ -20,7 +20,7 @@ function HomePage() {
     category: "All",
     priceRange: "",
     sortBy: "featured",
-    searchQuery: ""
+    searchQuery: "",
   };
   const methods = useForm({
     defaultValues,
